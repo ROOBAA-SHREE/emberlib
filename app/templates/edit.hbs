@@ -1,0 +1,20 @@
+<h1>Editing {{this.userData.items.[0].description.[0].name}}</h1>
+<form>
+    <div class="details">
+        <label for="userid"><b>Userid:</b></label>
+        {{input type = "text" placeholder = "Enter the userid" value = userid}}
+    </div>
+    <div class="details">
+        <label for="name"><b>Name:</b></label>
+        {{input type = "text" placeholder = "Enter the name" value = name}}
+    </div>
+    <div class="details">
+        <label for="email"><b>Email:</b></label>
+        {{input type = "text" placeholder = "Enter the email" value = email}}
+    </div>
+    <div class="details">
+        {{#link-to 'users'}} <button {{action 'save' }} class="add-button">save</button>{{/link-to}}
+        {{#link-to 'users'}} <button type="button">cancel</button> {{/link-to}}
+    </div>
+</form>
+{{outlet}}
