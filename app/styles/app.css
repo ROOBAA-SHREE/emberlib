@@ -1,19 +1,17 @@
-th{
-    min-width: 300px;
-    text-align:left
+table {
+  width: 100%;
 }
-td{
-    min-width: 300px;
+th, td {
+  text-align: left;
+  padding: 8px;
 }
 form{
     border: 1px solid #c6c7cc;
       border-radius: 5px;
       width:500px;
-      overflow: hidden;
       margin:0 auto;
   }
   label {
-    text-align: right;
     width: 400px;
     margin-bottom: 10px;
   }
@@ -26,4 +24,7 @@ form{
     margin-left:20px;
     margin-top:10px;
     margin-bottom:10px;
+  }
+  .newuserbutton{
+    float:right;
   }

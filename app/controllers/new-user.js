@@ -11,6 +11,7 @@ export default Controller.extend({
         "email": this.get('email'),
       });
       //console.log(this.userData.items[0][0].name);
-    },
-  },
+      
+    }
+  }
 });
