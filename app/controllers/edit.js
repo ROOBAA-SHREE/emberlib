@@ -6,6 +6,12 @@ export default Controller.extend({
     username:'',
     actions:
     {
+        edituser(){
+            this.set('username',this.get('userData').count[0].name);
+            this.set('userid', this.get('userData').count[0].userid);
+            this.set('name', this.get('userData').count[0].name);
+            this.set('email', this.get('userData').count[0].email);
+            },
         save() {
             set(this.get("userData").count[0], "userid", (this.get('userid')));
             set(this.get("userData").count[0], "name", (this.get('name')));
