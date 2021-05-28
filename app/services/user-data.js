@@ -9,6 +9,7 @@ export default Service.extend({
   },
   addItem(item) {
     this.items.pushObject({ 'description': [item] });
+    console.log(this.items);
   },
   add(item) {
     this.count = item;

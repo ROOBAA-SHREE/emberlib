@@ -1,0 +1,31 @@
+
+<div class="newuserbutton">
+  {{#link-to "users.new-user" class="button"}}
+  New User
+  {{/link-to}}
+</div>
+<table class="with-detail">
+  <tr>
+    <td class="table-overview">
+      <table class="user-table">
+        <th>userid</th>
+        <th>name</th>
+        <th>email</th>
+        {{#each this.userData.items as |item|}}
+        <tr>
+          <td>{{item.description.[0].userid}} </td>
+          <td>{{#link-to "users.details" item.description.[0].userid}} {{item.description.[0].name}} {{/link-to}}</td>
+          <td>{{item.description.[0].email}} </td>
+         <td> {{#link-to "users.edit" item.description.[0].userid }}
+          <button {{action "edituser" item.description}}>
+            Edit
+          </button>
+          {{/link-to}}
+          </td>
+        </tr>
+        {{/each}}
+      </table>
+    </td>
+  </tr>
+</table>
+{{outlet}}
